@@ -3,6 +3,7 @@
     <div class="counter-num">次数: {{num}}</div>
     <button class="counter-btn" @click="handleClick">草拟吗!</button>
     <button class="counter-reset-btn" @click="handleResetClick">清零</button>
+    <button class="weui-btn" type="primary">页面主操作 Normal</button>
   </div>
 </template>
 
