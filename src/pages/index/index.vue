@@ -1,7 +1,8 @@
 <template>
-  <div class="container" @click="clickHandle">
+  <div class="container">
     <div class="message">{{msg}}</div>
     <click-counter :init-num="10" @clicknum="handleClickNum" />
+    <i-button type="primary" @click="bindViewTap">按钮一个</i-button>
   </div>
 </template>
 
@@ -24,16 +25,23 @@ export default {
     },
     handleClickNum (data) {
       console.log('>>>>>>', data.num)
+    },
+    bindViewTap () {
+      console.log('typed')
     }
   }
 }
 </script>
 
 
-<style scoped>
-.message {
+<style>
+page{
+  height:100%;
+}
+.container {
+  background: blueviolet;
+  height: 100%;
   color: red;
-  padding: 10px;
   text-align: center;
 }
 </style>
