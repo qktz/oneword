@@ -2,7 +2,7 @@
   <div class="container">
     <div class="message">{{msg}}</div>
     <click-counter :init-num="10" @clicknum="handleClickNum" />
-    <i-button type="primary" @click="bindViewTap">按钮一个</i-button>
+    <i-button i-class="btn" type="primary" @click="bindViewTap">按钮一个</i-button>
   </div>
 </template>
 
@@ -34,7 +34,7 @@ export default {
 </script>
 
 
-<style>
+<style lang="css">
 page{
   height:100%;
 }
@@ -43,5 +43,13 @@ page{
   height: 100%;
   color: red;
   text-align: center;
+}
+
+.message {
+  color: blue;
+}
+
+div /deep/ .btn {
+  color: burlywood;
 }
 </style>
